@@ -11,20 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120506184218) do
+ActiveRecord::Schema.define(:version => 20120507121001) do
 
-  create_table "samples", :force => true do |t|
-    t.string   "project_name"
-    t.string   "issue"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+  create_table "tops", :force => true do |t|
+    t.integer  "year"
+    t.integer  "month"
+    t.integer  "day"
+    t.string   "week"
+    t.integer  "start"
+    t.integer  "end"
+    t.integer  "break_time"
+    t.integer  "work_time"
+    t.string   "issues"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

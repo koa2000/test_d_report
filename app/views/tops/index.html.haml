@@ -1,0 +1,35 @@
+%h1 Listing tops
+
+%table
+  %tr
+    %th Year
+    %th Month
+    %th Day
+    %th Week
+    %th Start
+    %th End
+    %th Break time
+    %th Work time
+    %th Issues
+    %th
+    %th
+    %th
+
+  - @tops.each do |top|
+    %tr
+      %td= top.year
+      %td= top.month
+      %td= top.day
+      %td= top.week
+      %td= top.start
+      %td= top.end
+      %td= top.break_time
+      %td= top.work_time
+      %td= top.issues
+      %td= link_to 'Show', top
+      %td= link_to 'Edit', edit_top_path(top)
+      %td= link_to 'Destroy', top, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Top', new_top_path

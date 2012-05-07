@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Year:
+  = @top.year
+%p
+  %b Month:
+  = @top.month
+%p
+  %b Day:
+  = @top.day
+%p
+  %b Week:
+  = @top.week
+%p
+  %b Start:
+  = @top.start
+%p
+  %b End:
+  = @top.end
+%p
+  %b Break time:
+  = @top.break_time
+%p
+  %b Work time:
+  = @top.work_time
+%p
+  %b Issues:
+  = @top.issues
+
+= link_to 'Edit', edit_top_path(@top)
+\|
+= link_to 'Back', tops_path
